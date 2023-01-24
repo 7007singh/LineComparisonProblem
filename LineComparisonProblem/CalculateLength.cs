@@ -25,11 +25,12 @@ namespace LineComparisonProblem
             distance2 = Math.Sqrt(Math.Pow(a2 - a1, 2) + Math.Pow(b2 - b1, 2));
             Console.WriteLine("distance of line: " + distance2);
 
-            
             if (distance2.Equals(distance1))
                 Console.WriteLine("{0} is equal to {1}", distance1, distance2);
+            else if (distance1 > distance2)
+                Console.WriteLine("{0} is grater then {1}", distance1, distance2);
             else
-                Console.WriteLine("{0} is not equal to {1}", distance1, distance2);
+                Console.WriteLine("{0} is less then {1}", distance1, distance2);
         }
     }
 }
