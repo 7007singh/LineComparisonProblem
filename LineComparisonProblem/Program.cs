@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LineComparisonProblem
 {
@@ -25,9 +20,21 @@ namespace LineComparisonProblem
             Console.WriteLine("Enter the value of y1");
             double val4 = Convert.ToDouble(Console.ReadLine());
 
-            CalculateLength length = new CalculateLength(val1, val2, val3, val4);
+            Console.WriteLine("Enter the value of a2");
+            double val5 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the value of a1");
+            double val6 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the value of b2");
+            double val7 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the value of b1");
+            double val8 = Convert.ToDouble(Console.ReadLine());
+
+            CalculateLength length = new CalculateLength(val1, val2, val3, val4, val5, val6, val7, val8);
             length.Calculate();
-            Console.Read();
+            Console.ReadLine();
         }
     }
 }
