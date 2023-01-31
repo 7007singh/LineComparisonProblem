@@ -20,10 +20,24 @@ namespace LineComparisonProblem
         public void Calculate()
         {
             distance1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-            Console.WriteLine("distance of line: " + distance1);
+            Console.WriteLine("distance of line1: " + distance1);
 
             distance2 = Math.Sqrt(Math.Pow(a2 - a1, 2) + Math.Pow(b2 - b1, 2));
-            Console.WriteLine("distance of line: " + distance2);
+            Console.WriteLine("distance of line2: " + distance2);
+
+            double status = distance1.CompareTo(distance2);
+            if(status == 0)
+            {
+                Console.WriteLine("{0} equal to {1}", distance1, distance2);
+            }
+            else if(status > 0)
+            {
+                Console.WriteLine("{0} is grater than {1}", distance1, distance2);
+            }
+            else
+            {
+                Console.WriteLine("{0} is less than {1}", distance1, distance2);
+            }
 
             if (distance2.Equals(distance1))
                 Console.WriteLine("{0} is equal to {1}", distance1, distance2);
